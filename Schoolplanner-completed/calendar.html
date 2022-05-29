@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Calendar
+    </title>
+    <!--<link rel="stylesheet" href="new-calendar.css">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="general_file.css">
+</head>
+<nav class="navbar navbar-dark fixed-top bg-primary flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="dashboard.html">Duomly Dashboard</a>
+  <input type="text" class="form-control form-control-primary w-100" placeholder="Search..." >
+  <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">
+      <a class="nav-link" href="MainPage.html">Logout</a>
+    </li>
+  </ul>
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2 bg-light d-none d-md-block sidebar">
+        <div class="left-sidebar">
+          <ul class="nav flex-column sidebar-nav">
+    <li class="nav-item">
+      <a class="nav-link active" href="calendar.html" target="_self">
+        <svg class="bi bi-chevron-right" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z" clip-rule="evenodd"/></svg>
+        Calendar
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="alarmpahe.html" target="_self">
+        <svg class="bi bi-chevron-right" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z" clip-rule="evenodd"/></svg>
+        Alarms
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="checklistfile.html" target="_self">
+        <svg class="bi bi-chevron-right" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z" clip-rule="evenodd"/></svg>
+        To-Do List (Checklist)
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">
+        <svg class="bi bi-chevron-right" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z" clip-rule="evenodd"/></svg>
+        Text Summarization
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">
+        <svg class="bi bi-chevron-right" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z" clip-rule="evenodd"/></svg>
+        Flash Cards
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="note.html" target="_self">
+      <svg class="bi bi-chevron-right" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z" clip-rule="evenodd"/></svg>
+      Notes
+      </a>
+  </li>
+  </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+<body class="light">
+    <div class="calendar">
+        <div class="calendar-header">
+            <div class="backButtonSection">
+       <!--<button type="button" id="backButton" onclick="window.location.href = 'dashboard.html';">Back</button>-->
+ </div>
+            <span class="month-picker" id="month-picker"></span>
+            <div class="month-select">
+                <div class="year-picker">
+                    <span class="year-change" id="prev-year">
+                        <pre><</pre>
+                    </span>
+                    <span id="year">2021</span>
+                    <span class="year-change" id="next-year">
+                        <pre>></pre>
+                    </span>
+                </div>
+               <!--<span class="month-change" >-->
+                    <pre class="previo" id="prev-month"><</pre>
+                <!--</span>-->
+                <span id="monteh">May</span>
+                <!--<span class="month-change" >-->
+                    <pre class="aft" id="next-month">></pre>
+                <!--</span>-->
+            </div>
+        </div>
+        <div class="calendar-body">
+            <div class="calendar-week-day">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            <div class="calendar-days"></div>
+        </div>
+        <div class="calendar-footer">
+           <!--<div class="toggle">
+                <span>Dark Mode</span>
+                <div class="dark-mode-switch">
+                    <div class="dark-mode-switch-ident"></div>
+                </div>
+            </div>--->
+        </div>
+        <div class="month-list"></div>
+    </div>
+
+    <script src="calendar.js"></script>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</html>

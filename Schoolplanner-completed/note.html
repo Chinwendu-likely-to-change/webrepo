@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Calendar
+    </title>
+    <!--<link rel="stylesheet" href="new-calendar.css">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="general_file.css">
+</head>
+<nav class="navbar navbar-dark fixed-top bg-primary flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="dashboard.html">Duomly Dashboard</a>
+  <input type="text" class="form-control form-control-primary w-100" placeholder="Search..." >
+  <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">
+      <a class="nav-link" href="MainPage.html">Logout</a>
+    </li>
+  </ul>
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2 bg-light d-none d-md-block sidebar">
+        <div class="left-sidebar">
+          <ul class="nav flex-column sidebar-nav">
+    <li class="nav-item">
+      <a class="nav-link active" href="calendar.html" target="_self">
+        <svg class="bi bi-chevron-right" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z" clip-rule="evenodd"/></svg>
+        Calendar
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="alarmpahe.html" target="_self">
+        <svg class="bi bi-chevron-right" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z" clip-rule="evenodd"/></svg>
+        Alarms
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="checklistfile.html" target="_self">
+        <svg class="bi bi-chevron-right" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z" clip-rule="evenodd"/></svg>
+        To-Do List (Checklist)
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">
+        <svg class="bi bi-chevron-right" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z" clip-rule="evenodd"/></svg>
+        Text Summarization
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">
+        <svg class="bi bi-chevron-right" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z" clip-rule="evenodd"/></svg>
+        Flash Cards
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="note.html" target="_self">
+      <svg class="bi bi-chevron-right" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z" clip-rule="evenodd"/></svg>
+      Notes
+      </a>
+  </li>
+  </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+<body>
+    <span class="empty">g</span><br/>
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        <div class="container my-3" id = "position">
+            <h1>Take notes for your activities this week:</h1>
+            <div class='dropdown'>
+                <div class='title pointerCursor'>Course: <i class="fa fa-angle-right"></i></div>
+                <div class='menu pointerCursor hide'>
+                    <div class='option' id='option1'>Calculus 1</div>
+                    <div class='option' id='option2'>Literature & Philosophy</div>
+                    <div class='option' id='option3'>French</div>
+                    <div class='option' id='option4'>Computer Programming</div>
+                    <div class='option' id='option5'>Basics of Engineering</div>
+                </div>
+            </div>
+<div class="card">
+<div class="card-body">
+    <h5 class="card-title">
+        Add a Note
+    </h5>
+    <div class="form-group">
+        <textarea class="form-control" id="addTxt" rows="3">
+        </textarea>
+    </div>
+    <button class="btn btn-primary" 
+    id="addBtn" style=
+    "background-color:green">
+    Add Note
+</button>
+</div>
+</div>
+<hr>
+<div id="notes" class="row container-fluid">
+</div>
+</div>
+</main>
+</div>
+</div>
+<script>
+let addBtn = document.getElementById("addBtn");
+const dropdownTitle = document.querySelector('.dropdown .title');
+const dropdownOptions = document.querySelectorAll('.dropdown .option');
+dropdownTitle.addEventListener('click',toggleMenuDisplay);
+dropdownOptions.forEach(option => option.addEventListener('click',handleOptionSelected));
+addBtn.addEventListener("click",function(e){
+let addTxt = document.getElementById("addTxt");
+let notes = localStorage.getItem("notes");
+if(notes == null) notesObj = [];
+else notesObj = JSON.parse(notes);
+notesObj.push(addTxt.value);
+localStorage.setItem("notes",JSON.stringify(notesObj));
+addTxt.value = "";
+showNotes();
+});
+function showNotes(){
+let notes = localStorage.getItem("notes");
+if(notes == null) notesObj = [];
+else notesObj = JSON.parse(notes);
+let html = "";
+notesObj.forEach(function(element,index){
+    const course = document.getElementById('notes');
+    html += `<div class="noteCard my-2 mx-2 card" style="width:18rem;">
+        <div class="card-body">
+            <h5 class="card-title">
+                ` + course.value + `
+            </h5>
+            <p class="card-text">
+                ${element}
+            </p>
+            <button id="${index}" onclick="deleteNote(this.id)"
+            class="btn btn-primary">
+            Delete Note
+            </button>
+            </div>
+            </div>`;
+
+});
+let notesElm = document.getElementById("notes");
+if(notesObj.length != 0) notesElm.innerHTML = html;
+else
+    notesElm.innerHTML = `Nothing to show! Use "Add a Note" section above to add notes.`;
+}
+function deleteNote(index){
+let notes = localStorage.getItem("notes");
+if(notes == null) notesObj = [];
+else notesObj = JSON.parse(notes);
+notesObj.splice(index,1);
+localStorage.setItem("notes",JSON.stringify(notesObj));
+showNotes();
+}
+function toggleClass(elem,className){
+if(elem.className.indexOf(className) !== -1){
+    elem.className = elem.className.replace(className,'');
+}else{
+    elem.className = elem.className.replace(/\s+/g,' ') + ' ' + className;
+}
+return elem;
+}
+function toggleDisplay(elem){
+const curDisplayStyle = elem.style.display;
+if(curDisplayStyle === 'none' || curDisplayStyle === ''){
+    elem.style.display = 'block';
+}else{
+    elem.style.display = 'none';
+}
+}
+function toggleMenuDisplay(e){
+const dropdown = e.currentTarget.parentNode;
+const menu = dropdown.querySelector('.menu');
+const icon = dropdown.querySelector('.fa-angle-right');
+toggleClass(menu,'hide');
+toggleClass(icon,'rotate-90');
+}
+function handleOptionSelected(e){
+toggleClass(e.target.parentNode,'hide');
+const id = e.target.id;
+const newValue = e.target.textContent + ' ';
+const titleElem = document.querySelector('.dropdown .title');
+const icon = document.querySelector('.dropdown .title .fa');
+titleElem.textContent = newValue;
+titleElem.appendChild(icon);
+document.querySelector('.dropdown .title').dispatchEvent(new Event('change'));
+setTimeout(() => toggleClass(icon,'rotate-90',0));
+}
+</script>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</html>
